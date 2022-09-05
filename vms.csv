@@ -1,0 +1,2 @@
+rg	vmname	newvnetrg	newvnetname	subnet	location
+cloud-test-rg02	test01	cloud-test-rg02	cloud-test--vnet01	default	eastus

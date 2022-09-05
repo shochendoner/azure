@@ -1,19 +1,23 @@
-Param
-(
-    [Parameter $OriginalResourceGroup=]
-$csv = Import-csv -Path '.\vms.csv' 
+$File = $PWD.Path+'\vms.csv'
+Get-Item -Path $File
+$VMNAME=Import-Csv -Path $File 
+foreach($vm in $VMNAME){
 
+$OriginalvmName =$vm.OriginalvmName
+$NewVnetResourceGroup =$vm.NewVnetResourceGroup
+$NewVNetName =$vm.NewVNetName
+$NewSubnet =$vm.NewSubnet
+$NewvmName =$vm.OriginalvmName
+$Location=$vm.Location
 
-ForEach ($VM in $csv) {
-    $OriginalResourceGroup=$VM.rg
-    $OriginalvmName=$VM.vmname
-    $NewVnetName=$VM.newvnetname
-    $NewSubnet=$VM.subnet
-    $NewvmName=$VM.vmname
-    $NewVnetResourceGroup=$VM.newvnetrg
-    $NewVnetResourceGroup=$VM.newvnetrg
-}
-)
+OriginalresourceGroup: RG01
+      OriginalvmName: VM01
+      NewvmName: VM02
+      NewAvailSetName: AS02
+      NewVnetResourceGroup: RG02
+      NewVNetName: VNETB
+      NewSubnet: Subnet1
+      Location: $Location
 
 # Needed Parameters for the script
 <#
@@ -123,3 +127,4 @@ Set-AzContext -SubscriptionId $selectedSubscriptionID -ErrorAction Ignore
 
 #Recreate the VM
     New-AzVM -ResourceGroupName $NewVnetResourceGroup -Location $originalVM.Location -VM $newVM -Verbose
+}

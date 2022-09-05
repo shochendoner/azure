@@ -1,2 +1,2 @@
-rg	vmname	newvnetrg	newvnetname	subnet	location
-cloud-test-rg02	test01	cloud-test-rg02	cloud-test--vnet01	default	eastus
+OriginalvmName,OriginalResourceGroup,NewVnetResourceGroup,NewVnetResourceGroup,"NewVNetName	","NewSubnet	",location
+CLOUD-TEST-RG02,CLOUD-TEST-RG02,cloud-test-rg01,cloud-test-rg01,cloud-test--vnet01,default,eastus

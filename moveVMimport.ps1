@@ -8,5 +8,5 @@ ForEach ($VM in $csv) {
     $NewSubnet=$VM.subnet
     $NewvmName=$VM.vmname
     $NewVnetResourceGroup=$VM.newvnetrg
-    $NewVnetResourceGroup=$VM.newvnetrg
+    $NewSubnet=$VM.subnet
 }

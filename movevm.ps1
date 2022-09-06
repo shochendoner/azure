@@ -1,24 +1,20 @@
 # Needed Parameters for the script
 Param
-
 (
-    
     [Parameter(Mandatory=$True, HelpMessage="Enter the Resource Group of the original VM")]
-    [string] $OriginalResourceGroup=$VM.OriginalResourceGroup,
+    [string] $OriginalResourceGroup,
     [Parameter(Mandatory=$True, HelpMessage="Enter the original VM name")]
-    [string] $OriginalvmName =$vm.OriginalvmName,
+    [string] $OriginalvmName,
     [Parameter(Mandatory=$True, HelpMessage="Enter the new VM name")]
-    [string] $NewvmName =$vm.OriginalvmName,
+    [string] $NewvmName,
     [Parameter(Mandatory=$True, HelpMessage="Enter the new VNet resource group")]
-    [string] $NewVnetResourceGroup =$vm.NewVnetResourceGroup,
+    [string] $NewVnetResourceGroup,
     [Parameter(Mandatory=$True, HelpMessage="Enter the new VNet name")]
-    [string] $NewVNetName =$vm.NewVNetName,
+    [string] $NewVNetName,
     [Parameter(Mandatory=$True, HelpMessage="Enter the new Subnet name")]
-    [string] $NewSubnet =$vm.NewSubnet,
+    [string] $NewSubnet,
     [Parameter(Mandatory=$True, HelpMessage="Enter Azure region")]
     [string] $Location
-
-    
 )
     
 <#

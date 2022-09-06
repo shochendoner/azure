@@ -1,1 +1,1 @@
-.\movevm.ps1 -OriginalResourceGroup cloud-test-rg02 -OriginalvmName test01 -NewvmName test01 -NewVnetResourceGroup cloud-test-rg02 -NewVNetName test-vnet02
+.\movevm.ps1 -OriginalResourceGroup 'cloud-ravens' -OriginalvmName 'MarkAndrews-VM' -NewvmName 'MarkAndrews-VM' -NewVnetResourceGroup 'cloud-test-rg02' -NewVNetName 'test-vnet02' -NewSubnet 'default' -Location 'eastus'

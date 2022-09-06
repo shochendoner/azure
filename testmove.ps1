@@ -1,13 +1,10 @@
 # Initialise environment and variables
 
 # Declare endpoint
-$ArmEndpoint = "https://management.frn00006.azure.ukcloud.com"
 
-## Add environment
-Add-AzEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 
 ## Login
-Connect-AzAccount -EnvironmentName "AzureStackUser"
+Connect-AzAccount -Subscription "Cloud Infrastructure"
 
 # Get location of Azure Stack Hub
 $Location = (Get-AzLocation).Location
@@ -16,9 +13,9 @@ $Location = (Get-AzLocation).Location
 $RGName = "cloud-test-rg02"
 $VMName = "testvm03"
 $NewNetworkName = "cloud-test--vnet01"
-$NewSubnetName = "default"
+$NewSubnetName = "test-vnet02"
 $NewPrivateIp = "10.1.0.5"
-$NewNicName = '($RGName)-nic01'
+$NewNicName = 'testvm03-nic01'
 
 # Retrieve VM details
 $VM = Get-AzVM -Name $VMName -ResourceGroupName $RGName

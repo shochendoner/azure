@@ -1,0 +1,1 @@
+.\movevm.ps1 -OriginalResourceGroup cloud-test-rg02 -OriginalvmName test01 -NewvmName test01 -NewVnetResourceGroup cloud-test-rg02 -NewVNetName test-vnet02

@@ -1,26 +1,25 @@
 # Needed Parameters for the script
 Param
-
 (
     
     [Parameter(Mandatory=$True, HelpMessage="Enter the Resource Group of the original VM")]
-    [string] $OriginalResourceGroup=$VM.OriginalResourceGroup,
+    [string] $OriginalResourceGroup="cloud-test-rg02",
     [Parameter(Mandatory=$True, HelpMessage="Enter the original VM name")]
-    [string] $OriginalvmName =$vm.OriginalvmName,
+    [string] $OriginalvmName = "testvm03",
     [Parameter(Mandatory=$True, HelpMessage="Enter the new VM name")]
-    [string] $NewvmName =$vm.OriginalvmName,
+    [string] $NewvmName = "testvm03",
     [Parameter(Mandatory=$True, HelpMessage="Enter the new VNet resource group")]
-    [string] $NewVnetResourceGroup =$vm.NewVnetResourceGroup,
+    [string] $NewVnetResourceGroup = 'cloud-test-rg01',
     [Parameter(Mandatory=$True, HelpMessage="Enter the new VNet name")]
-    [string] $NewVNetName =$vm.NewVNetName,
+    [string] $NewVNetName = 'cloud-test--vnet01',
     [Parameter(Mandatory=$True, HelpMessage="Enter the new Subnet name")]
-    [string] $NewSubnet =$vm.NewSubnet,
+    [string] $NewSubnet = 'default',
     [Parameter(Mandatory=$True, HelpMessage="Enter Azure region")]
     [string] $Location
 
     
 )
-    
+
 <#
     .SYNOPSIS
         Migrates an Azure VM from current VNet to a new VNet in Azure by creating a new VM in new VNet retaining the original VMs configuration and data disks.

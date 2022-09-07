@@ -110,7 +110,7 @@ Set-AzContext -SubscriptionId $selectedSubscriptionID -ErrorAction Ignore
 
 #Create new NIC for new VM
     New-AzNetworkInterface -ResourceGroupName $NewVnetResourceGroup `
-      -Name "$NewvmName-nic01" `
+      -Name "($NewvmName)-nic01" `
       -Location "$Location" `
       -SubnetId $backEndSubnet.Id
 

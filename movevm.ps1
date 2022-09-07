@@ -98,7 +98,7 @@ Set-AzContext -SubscriptionId $selectedSubscriptionID -ErrorAction Ignore
 #Remove the original VM
     Remove-AzVM -ResourceGroupName $OriginalResourceGroup -Name $OriginalvmName    
 
-#Create new availability set if it does not exist
+
 
    
 
@@ -110,7 +110,7 @@ Set-AzContext -SubscriptionId $selectedSubscriptionID -ErrorAction Ignore
 
 #Create new NIC for new VM
     New-AzNetworkInterface -ResourceGroupName $NewVnetResourceGroup `
-      -Name "01$NewvmName" `
+      -Name "$NewvmName-nic01" `
       -Location "$Location" `
       -SubnetId $backEndSubnet.Id
 

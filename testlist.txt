@@ -1,0 +1,7 @@
+server,port
+dc01-uat,139
+dc01-uat,389
+sql01-uat,1433
+spheredc01,135
+dEMOadwINsVR01,389
+dEMOadwINsVR01,3389

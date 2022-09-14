@@ -1,0 +1,67 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "virtualMachines_SB30_UAT_name": {
+            "defaultValue": "SB30-UAT",
+            "type": "String"
+        },
+        "disks_SB30_UAT_OsDisk_1_d9d5151e10ad48d7afed625649f0eac4_externalid": {
+            "defaultValue": "/subscriptions/738ed618-66b1-437e-a2af-768880a84417/resourceGroups/SPHEREUS/providers/Microsoft.Compute/disks/SB30-UAT_OsDisk_1_d9d5151e10ad48d7afed625649f0eac4",
+            "type": "String"
+        },
+        "networkInterfaces_sb30_uat548_externalid": {
+            "defaultValue": "/subscriptions/738ed618-66b1-437e-a2af-768880a84417/resourceGroups/Network-UAT-rg/providers/Microsoft.Network/networkInterfaces/sb30-uat548",
+            "type": "String"
+        }
+    },
+    "variables": {},
+    "resources": [
+        {
+            "type": "Microsoft.Compute/virtualMachines",
+            "apiVersion": "2022-03-01",
+            "name": "[parameters('virtualMachines_SB30_UAT_name')]",
+            "location": "eastus",
+            "tags": {
+                "VMSchedule-Enabled": "Yes",
+                "VMSchedule-Exclusions": "Start",
+                "VMSchedule-UTCOffset": "-4",
+                "VMSchedule-Weekdays": "06-18",
+                "VMSchedule-Weekends": "Off"
+            },
+            "properties": {
+                "hardwareProfile": {
+                    "vmSize": "Standard_D2s_v5"
+                },
+                "storageProfile": {
+                    "osDisk": {
+                        "osType": "Windows",
+                        "name": "[concat(parameters('virtualMachines_SB30_UAT_name'), '_OsDisk_1_d9d5151e10ad48d7afed625649f0eac4')]",
+                        "createOption": "Attach",
+                        "caching": "ReadWrite",
+                        "managedDisk": {
+                            "id": "[parameters('disks_SB30_UAT_OsDisk_1_d9d5151e10ad48d7afed625649f0eac4_externalid')]"
+                        },
+                        "deleteOption": "Detach"
+                    },
+                    "dataDisks": []
+                },
+                "networkProfile": {
+                    "networkInterfaces": [
+                        {
+                            "id": "[parameters('networkInterfaces_sb30_uat548_externalid')]",
+                            "properties": {
+                                "deleteOption": "Detach"
+                            }
+                        }
+                    ]
+                },
+                "diagnosticsProfile": {
+                    "bootDiagnostics": {
+                        "enabled": true
+                    }
+                }
+            }
+        }
+    ]
+}

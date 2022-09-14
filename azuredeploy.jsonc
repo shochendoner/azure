@@ -1,0 +1,282 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        // Virtual Machine Instance Details
+        "virtualMachineName": {
+            "type": "string",
+            "metadata": {
+                "description": "Name of Virtual Machine. No more than 15 characters long"
+            }
+        },
+        "location": {
+            "defaultValue": "[resourceGroup().location]",
+            "type": "string",
+            "metadata": {
+                "description": "Location of all resources"
+            }
+        },
+        // Availability Options (Not exceptable for A1 Series VMs)
+        "availabilityZone": {
+            "type": "string",
+            "defaultValue": "0",
+            "allowedValues": [
+                "0",
+                "1",
+                "2"
+            ],
+            "metadata": {
+                "description": "Used to identify how many availability zones to be associted with for the VM"
+            }
+        },
+        // Machine Size/Type
+        "virtualMachineSize": {
+            "type": "string",
+            "defaultValue": "Standard_B4ms",
+            "metadata": {
+                "description": "Identifies the Virtual Machine Size"
+            }
+        },
+        "licenseType": {
+            "type": "string",
+            "defaultValue": "Windows_Client",
+            "allowedValues": [
+                "Windows_Client",
+                "RHEL_BYOS",
+                "SLES_BYOS"
+            ],
+            "metadata": {
+                "description": "Aggreement for licening on Windows"
+            }
+        },
+        "enablebootDiagnostics": {
+            "type": "bool",
+            "defaultValue": true
+        },
+        "diskName": {
+            "type": "string",
+            "metadata": {
+                "description": "Identifies the new disk name"
+            }
+        },      
+        "snapshotName": {
+            "type": "string",
+            "metadata": {
+                "description": "Identifies the snapshot name"
+            }
+        },
+        // Virtual Machine Network Allocation
+        "virtualNetworkName": {
+            "type": "string",
+            "metadata": {
+                "description": "Identifies the virtual network name"
+            }
+        },
+        "privateNetwork": {
+            "type": "bool",
+            "allowedValues": [
+                true,
+                false
+            ],
+            "defaultValue": true,
+            "metadata": {
+                "description": "Determines weather or not its a private network."
+            }
+        },
+        // Network Interface
+        "networkInterfaceName": {
+            "type": "string",
+            "metadata": {
+                "description": "Identifies the network interface name"
+            }
+        },
+        "configParm1Name": {
+            "type": "string",
+            "defaultValue": "ipconfig1",
+            "metadata": {
+                "description": "Identifies the IP configuration name within the network interface. "
+            }
+        },
+        // Subnet
+        "subnetName": {
+            "type": "string",
+            "metadata": {
+                "description": "Used to identify the name of the subnet within the network interfaces"
+            }
+        },
+        // Security Groups (Opening up only 3389)
+        "securityGroupName": {
+            "type": "string",
+            "metadata": {
+                "description": "Identifies the security groups name for the virtual machine"
+            }
+        },
+        // Public IP Allocation to VM
+        "publicIpAddressName": {
+            "type": "string",
+            "metadata": {
+                "description": "Identifies the public ip address of the virtual machine"
+            }
+        },
+        "publicIpAllocationMethod": {
+            "type": "string",
+            "defaultValue": "Static",
+            "allowedValues": [
+                "Static",
+                "Dynamic"
+            ],
+            "metadata": {
+                "description": "Identifies the type of IP pool method is used such as static or dhcp."
+            }
+        },
+        "privateIpAllocationMethod": {
+            "type": "string",
+            "defaultValue": "Static",
+            "allowedValues": [
+                "Static",
+                "Dynamic"
+            ],
+            "metadata": {
+                "description": "Identifies the type of IP pool method is used such as static or dhcp."
+            }
+        },
+        "publicIpAddressSku": {
+            "type": "string",
+            "defaultValue": "Standard",
+            "allowedValues": [
+                "Basic",
+                "Standard"
+            ],
+            "metadata": {
+                "description": "Identifies the ip edition"
+            }
+        },
+        "identityType": {
+            "type": "string",
+            "defaultValue": "systemAssigned",
+            "allowedValues": [
+                "systemAssigned",
+                "UserAssigned"
+            ],
+            "metadata": {
+                "description": "Identifies the type of identity that VM should use."
+            }
+        },
+        "privateIP": {
+            "type": "string"
+        },
+        "executeScript": {
+            "type": "bool",
+            "defaultValue": false,
+            "metadata": {
+                "description": "Identifies weather or not to execute the script on the Virtual Machine"
+            }
+        },
+        "executionScriptSaSURI": {
+            "type": "string",
+            "defaultValue": "x",
+            "metadata": {
+                "description": "Identifies the script to be ran on the Virtual Machine after provisioning"
+            }
+        
+        }
+    },
+    "functions": [],
+    "variables": {
+        "virtualMachineName": "[toLower(concat(parameters('virtualMachineName')))]",
+        "networkSecurityGroupId": "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('securityGroupName'))]",
+        "ipAssocaition": { "id": "[resourceId('Microsoft.Network/publicIpAddresses',parameters('publicIpAddressName'))]" },
+        "osDiskSnapshot": "[resourceId('Microsoft.Compute/snapshots/', parameters('snapshotName'))]"
+},
+    "resources": [
+        {
+            "condition": "[equals(parameters('privateNetwork'), bool('false'))]",
+            "name": "[parameters('publicIpAddressName')]",
+            "type": "Microsoft.Network/publicIpAddresses",
+            "apiVersion": "2019-02-01",
+            "location": "[parameters('location')]",
+            "properties": {
+                "publicIpAllocationMethod": "[parameters('publicIpAllocationMethod')]"
+            },
+            "sku": {
+                "name": "[parameters('publicIpAddressSku')]"
+            },
+            "zones": [ "[parameters('availabilityZone')]" ]
+        },
+        {
+            "name": "[parameters('networkInterfaceName')]",
+            "type": "Microsoft.Network/networkInterfaces",
+            "apiVersion": "2020-07-01",
+            "location": "[parameters('location')]",
+            "properties": {
+                "ipConfigurations": [
+                    {
+                        "name": "[parameters('configParm1Name')]",
+                        "properties": {
+                            "subnet": {
+                                "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworkName'), parameters('subnetName'))]"
+                            },
+                            "privateIPAllocationMethod": "[if(equals(parameters('privateNetwork'), true()), parameters('privateIPAllocationMethod'), 'Dynamic')]",
+                            "publicIpAddress": "[if(equals(parameters('privateNetwork'), false()), variables('ipAssocaition'), json('null'))]",
+                            "privateIPAddress": "[if(equals(parameters('privateNetwork'), true()), parameters('privateIP'), json('null'))]"
+                        }
+                    }
+                ],
+                "networkSecurityGroup": { "id": "[variables('networkSecurityGroupId')]" }
+},
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/publicIpAddresses/', parameters('publicIpAddressName'))]"
+            ]
+        },
+        {
+            "type": "Microsoft.Compute/disks",
+            "apiVersion": "2020-12-01",
+            "name": "[parameters('diskName')]",
+            "location": "[parameters('location')]",
+            "properties": {
+                "creationData": {
+                    "createOption": "copy",
+                    "sourceResourceId": "[variables('osDiskSnapshot')]"
+                }
+            }
+        },
+        {
+            "name": "[variables('virtualMachineName')]",
+            "type": "Microsoft.Compute/virtualMachines",
+            "apiVersion": "2020-12-01",
+            "location": "[parameters('location')]",
+            "properties": {
+                "hardwareProfile": {
+                    "vmSize": "[parameters('virtualMachineSize')]"
+                },
+                "licenseType": "[parameters('licenseType')]",
+                "diagnosticsProfile": {
+                    "bootDiagnostics": {
+                        "enabled": "[parameters('enablebootDiagnostics')]"
+                    }
+                },
+                "storageProfile": {
+                    "osDisk": {
+                    "createOption": "Attach",
+                    "osType": "Windows",
+                    "managedDisk": {
+                        "id": "[resourceId('Microsoft.Compute/disks', parameters('diskName'))]"
+                    }
+                    }
+                },
+                "networkProfile": {
+                    "networkInterfaces": [
+                        { "id": "[resourceId('Microsoft.Network/networkInterfaces/', parameters('networkInterfaceName'))]" }
+                    ]
+                }
+            },
+            "identity": {
+                "type": "[parameters('identityType')]"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/networkInterfaces/', parameters('networkInterfaceName'))]",
+                "[resourceId('Microsoft.Compute/disks', parameters('diskName'))]"
+            ]
+        }
+    ]
+}

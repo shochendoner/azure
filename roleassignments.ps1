@@ -25,7 +25,7 @@ Only Export Role assignments for current subscription and export to CSV file to 
 #Parameters
 Param (
     [Parameter(Mandatory=$false)]    
-    [string]$OutputPath = '',
+    [string]$OutputPath = 'C:\users\shochendoner\Documents',
     [Parameter(Mandatory=$false)]    
     [Switch]$SelectCurrentSubscription
 	

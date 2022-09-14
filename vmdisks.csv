@@ -1,2 +1,2 @@
-﻿rgName,vmName,ssname
-cloud-test-rg01,testcopy,testcopy-ss01
+﻿vmName ,rgName,ssname
+NetAppQA01,NETAPPQA01-RG,NetAppQA01-ss01

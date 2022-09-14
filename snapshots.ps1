@@ -1,18 +1,19 @@
-$SS = Import-CSV '.\vmdisks.csv'
-foreach ($vmName in $SS){
-    $resourceGroupName = $vmName.rgname 
-    $location = 'EastUS'
-    $vmName = $vmName.Vmname
-|
-    Get-AZVM -Name $vmname -ResourceGroupName $resourceGroupName
-    
-    $snapshotConfig = New-AzSnapshotConfig -SourceUri $vm.StorageProfile.OsDisk.ManagedDisk.Id -Location $location -CreateOption 'copy' -SkuName 'Standard_LRS'
+$SS = Import-csv '.\vmdisks.csv' 
+$resourceGroupName = $SS.rgname 
+$location = 'eastus' 
+$vmName = $SS.vmName 
+$snapshotName = $SS.ssname
 
-    $timestamp = Get-Date -Format yyMMddThhmmss
-    $snapshotName = ($vmName+$timestamp)
 
-    New-AzSnapshot -Snapshot $snapshotConfig `
-                   -SnapshotName $snapshotName `
-                   -ResourceGroupName $resourceGroupName
+$Imports = import-csv .\vmdisks.csv
+$SS=   foreach ($VM in $Imports){
+#Get the VM
+Get-AzVM -ResourceGroupName $resourceGroupName -Name $vmName
+
+#Create the snapshot configuration
+$snapshot =  New-AzSnapshotConfig -SourceUri $vm.StorageProfile.OsDisk.ManagedDisk.Id -Location $location -CreateOption copy
+
+#Take the snapshot
+New-AzSnapshot -Snapshot $snapshot -SnapshotName $snapshotName -ResourceGroupName $resourceGroupName 
+
 }
-

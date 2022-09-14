@@ -1,1 +1,0 @@
-.\movevm.ps1 -OriginalResourceGroup 'Network-Cloud-rg' -OriginalvmName 'SPHEREExch2010' -NewvmName 'SPHEREExch2010' -NewVnetResourceGroup 'SphereUS-VNET-rg' -NewVNetName 'SPHERE-INTERNAL-VNET' -NewSubnet 'default' -Location 'eastus'

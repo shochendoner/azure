@@ -1,0 +1,15 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "VMName": {
+            "value": "Ravens-MarkAndrews-VM01"
+        },
+        "diskid": {
+            "value": "/subscriptions/af4420af-017b-4915-bdf0-c20e8650b81e/resourceGroups/CLOUD-RAVENS/providers/Microsoft.Compute/disks/Ravens-MarkAndrews-VM01_OsDisk_1_0412d70bd35c44d18383cad6b4d4720f"
+        },
+        "nicid": {
+            "value": "/subscriptions/af4420af-017b-4915-bdf0-c20e8650b81e/resourceGroups/cloud-ravens/providers/Microsoft.Network/networkInterfaces/ravens-markandrew341"
+        }
+    }
+}

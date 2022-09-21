@@ -1,8 +1,8 @@
-$templateFile = ".\new\azuredeploy.json"
-$parameterFile = ".\new\azuredeploy.parameters2.json"
-$rgname = "cloud-ravens"
+$templateFile = ".\azuredeploy.json"
+$parameterFile = ".\param\SB05-demo.azuredeploy.parameters.json"
+$rgname = "SB"
 New-AzResourceGroupDeployment `
-  -Name UATMove `
+  -Name SB05DemoMove02 `
   -ResourceGroupName $rgname `
   -TemplateFile $templateFile `
   -TemplateParameterFile $parameterFile

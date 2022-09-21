@@ -28,13 +28,13 @@
                 "VMSchedule-UTCOffset": "-4",
                 "VMSchedule-Weekdays": "06-18",
                 "VMSchedule-Weekends": "Off",
-                "Domain": "UAT",
-                "Purpose": "SB Testing",
+                "Domain": "Demo",
+                "Purpose": "SB Demo",
                 "CreatedBy": "Steven Hochendoner"
             },
             "properties": {
                 "hardwareProfile": {
-                    "vmSize": "Standard_D2s_v5"
+                    "vmSize": "Standard_B2ms"
                 },
                 "storageProfile": {
                     "osDisk": {

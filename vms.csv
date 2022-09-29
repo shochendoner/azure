@@ -1,5 +1,5 @@
 VMname,RGname,subnet,nic
-ctera-gateway-UAT,Network-UAT-rg,/subscriptions/738ed618-66b1-437e-a2af-768880a84417/resourceGroups/Network-UAT-rg/providers/Microsoft.Network/virtualNetworks/SPHEREBOARD-UAT-VNET/subnets/default,ctera-gateway-UAT-nic01
+ctera-gateway-UAT,Network-UAT-rg,/subscriptions/a420c4b2-abe5-4706-a51f-adc00c1c46d3/resourceGroups/Baltimore-ravens-rg/providers/Microsoft.Network/virtualNetworks/Ravens-Vnet/subnets/Offense,ctera-gateway-UAT-nic01
 BUILD-Server,Network-DEV-rg,/subscriptions/738ed618-66b1-437e-a2af-768880a84417/resourceGroups/Network-DEV-rg/providers/Microsoft.Network/virtualNetworks/SPHEREBOARD-DEV-VNET/subnets/default,BUILD-Server-nic01
 CAC01-SPHDEMO,Network-DEV-rg,/subscriptions/738ed618-66b1-437e-a2af-768880a84417/resourceGroups/Network-DEV-rg/providers/Microsoft.Network/virtualNetworks/SPHEREBOARD-DEV-VNET/subnets/default,CAC01-SPHDEMO-nic01
 CAC01-UAT,Network-DEV-rg,/subscriptions/738ed618-66b1-437e-a2af-768880a84417/resourceGroups/Network-DEV-rg/providers/Microsoft.Network/virtualNetworks/SPHEREBOARD-DEV-VNET/subnets/default,CAC01-UAT-nic01

@@ -3,13 +3,13 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "VMName": {
-            "value": "WIN-S-VM-SB05-Demo"
+            "value": "WIN-S-Demo-SB05"
         },
         "diskid": {
-            "value": "/subscriptions/738ed618-66b1-437e-a2af-768880a84417/resourceGroups/SB/providers/Microsoft.Compute/disks/SB05-Demo"
+            "value": "/subscriptions/93077af1-0323-4ee0-8303-afb4c3d3479c/resourceGroups/SB-sales-rg/providers/Microsoft.Compute/disks/SB05-Demo"
         },
         "nicid": {
-            "value": "/subscriptions/738ed618-66b1-437e-a2af-768880a84417/resourceGroups/SB/providers/Microsoft.Network/networkInterfaces/sb05-demo"
+            "value": "/subscriptions/93077af1-0323-4ee0-8303-afb4c3d3479c/resourceGroups/SB-sales-rg/providers/Microsoft.Network/networkInterfaces/sb05-demo"
         }
     }
 }

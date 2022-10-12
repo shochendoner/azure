@@ -1,0 +1,68 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "VMName": {
+            "defaultValue": "VM-ENVIRONMENT-NUMBER",
+            "type": "String"
+        },
+        "diskid": {
+            "defaultValue": "",
+            "type": "String"
+        },
+        "nicid": {
+            "defaultValue": "",
+            "type": "String"
+        }
+    },
+    "variables": {},
+    "resources": [
+        {
+            "type": "Microsoft.Compute/virtualMachines",
+            "apiVersion": "2022-03-01",
+            "name": "[parameters('VMName')]",
+            "location": "eastus",
+            "tags":  {
+                "Owner:": "Carly Bean",
+                "Domain:": "UAT",
+                "VMSchedule-Enabled": "Yes",
+                "VMSchedule-Weekdays": "06-18",
+                "VMSchedule-Weekends": "Off",
+                "VMSchedule-UTCOffset": "-4",
+                "VMSchedule-Exclusions": "Start"
+            },
+            "properties": {
+                "hardwareProfile": {
+                    "vmSize": "Standard_D2s_v3"
+                },
+                "storageProfile": {
+                    "osDisk": {
+                        "osType": "Windows",
+                        "createOption": "Attach",
+                        "caching": "ReadWrite",
+                        "managedDisk": {
+                            "id": "[parameters('diskid')]"
+                        },
+                        "deleteOption": "Detach"
+                    },
+                    "dataDisks": []
+                },
+                "networkProfile": {
+                    "networkInterfaces": [
+                        {
+                            "id": "[parameters('nicid')]",
+                            "properties": {
+                                "deleteOption": "Detach"
+                            }
+                        }
+                    ]
+                },
+                "diagnosticsProfile": {
+                    "bootDiagnostics": {
+                        "enabled": true
+                    }
+                }
+            }
+        }
+    ]
+}

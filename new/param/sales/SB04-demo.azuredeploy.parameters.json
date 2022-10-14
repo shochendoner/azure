@@ -6,10 +6,10 @@
             "value": "WIN-S-Demo-SB04"
         },
         "diskid": {
-            "value": "/subscriptions/738ed618-66b1-437e-a2af-768880a84417/resourceGroups/Network-SALES-rg/providers/Microsoft.Compute/disks/SB04-Demo"
+            "value": "/subscriptions/93077af1-0323-4ee0-8303-afb4c3d3479c/resourceGroups/SB-sales-rg/providers/Microsoft.Compute/disks/SB04-Demo"
         },
         "nicid": {
-            "value": "/subscriptions/738ed618-66b1-437e-a2af-768880a84417/resourceGroups/Network-SALES-rg/providers/Microsoft.Network/networkInterfaces/sb04-demo"
+            "value": "/subscriptions/93077af1-0323-4ee0-8303-afb4c3d3479c/resourceGroups/SB-SALES-rg/providers/Microsoft.Network/networkInterfaces/sb04-demo-nic02"
         }
     }
 }

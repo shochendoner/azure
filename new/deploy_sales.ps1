@@ -1,8 +1,8 @@
-$templateFile = ".\azuredeploy.sales.json"
-$parameterFile = ".\param\SB04-DEMO.azuredeploy.parameters.json"
-$rgname = "Network-SALES-rg"
+$templateFile = "F:\repos\azure\new\param\azuredeploy.sales.json"
+$parameterFile = "F:\repos\azure\new\param\sales\SLP01-demo.azuredeploy.parameters.json"
+$rgname = "SB"
 New-AzResourceGroupDeployment `
-  -Name sb25-uatmove02 `
+  -Name slp01move `
   -ResourceGroupName $rgname `
   -TemplateFile $templateFile `
   -TemplateParameterFile $parameterFile

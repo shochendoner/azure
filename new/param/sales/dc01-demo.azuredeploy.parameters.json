@@ -1,0 +1,15 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "VMName": {
+            "value": "WIN-S-Demo-DC-01"
+        },
+        "diskid": {
+            "value": "/subscriptions/738ed618-66b1-437e-a2af-768880a84417/resourceGroups/Steve-Azuremove-rg/providers/Microsoft.Compute/disks/DC01-Demo"
+        },
+        "nicid": {
+            "value": "/subscriptions/738ed618-66b1-437e-a2af-768880a84417/resourceGroups/Steve-Azuremove-rg/providers/Microsoft.Network/networkInterfaces/dc01-demo"
+        }
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "VMName": {
+            "value": "WIN-S-FileSrv-02"
+        },
+        "diskid": {
+            "value": "/subscriptions/738ed618-66b1-437e-a2af-768880a84417/resourceGroups/STEVE-AZUREMOVE-RG/providers/Microsoft.Compute/disks/FileSvr02-Demo_OsDisk_1_1892365327624abab3720aee76f86718"
+        },
+        "nicid": {
+            "value": "/subscriptions/738ed618-66b1-437e-a2af-768880a84417/resourceGroups/STEVE-AZUREMOVE-RG/providers/Microsoft.Network/networkInterfaces/filesvr02-demo656"
+        }
+    }
+}

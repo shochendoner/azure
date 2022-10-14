@@ -1,0 +1,15 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "VMName": {
+            "value": "LNX-S-Demo-LINXServer-02"
+        },
+        "diskid": {
+            "value": "/subscriptions/738ed618-66b1-437e-a2af-768880a84417/resourceGroups/Steve-AzureMove-rg/providers/Microsoft.Compute/disks/LINXServer02-Demo_OsDisk_1_73d656734ef243ecaa947968e67ad743"
+        },
+        "nicid": {
+            "value": "/subscriptions/738ed618-66b1-437e-a2af-768880a84417/resourceGroups/Steve-AzureMove-rg/providers/Microsoft.Network/networkInterfaces/linxserver02-demo648"
+        }
+    }
+}

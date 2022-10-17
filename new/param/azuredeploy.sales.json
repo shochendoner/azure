@@ -46,7 +46,9 @@
                         },
                         "deleteOption": "Detach"
                     },
-                    "dataDisks": []
+                     "dataDisks": []
+            
+          
                 },
                 "networkProfile": {
                     "networkInterfaces": [

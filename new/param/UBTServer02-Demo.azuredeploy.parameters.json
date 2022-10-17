@@ -1,0 +1,15 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "VMName": {
+            "value": "WIN-U-SB03"
+        },
+        "diskid": {
+            "value": "/subscriptions/738ed618-66b1-437e-a2af-768880a84417/resourceGroups/Network-UAT-rg/providers/Microsoft.Compute/disks/SB03-UAT_disk1_f59e5cf6482c4d2ca04d0b37ca287d0b"
+        },
+        "nicid": {
+            "value": "/subscriptions/738ed618-66b1-437e-a2af-768880a84417/resourceGroups/Network-UAT-rg/providers/Microsoft.Network/networkInterfaces/SB03-UAT-nic01"
+        }
+    }
+}

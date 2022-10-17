@@ -1,0 +1,21 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "VMName": {
+            "value": "WIN-S-FileSrv-01"
+        },
+        "diskid": {
+            "value": "/subscriptions/738ed618-66b1-437e-a2af-768880a84417/resourceGroups/STEVE-AZUREMOVE-RG/providers/Microsoft.Compute/disks/FileSvr01-Demo"
+        },
+        "nicid": {
+            "value": "/subscriptions/738ed618-66b1-437e-a2af-768880a84417/resourceGroups/Steve-AzureMove-rg/providers/Microsoft.Network/networkInterfaces/filesvr01-demo"
+        },
+        "disks_f_externalid": {
+            "value": "/subscriptions/738ed618-66b1-437e-a2af-768880a84417/resourceGroups/SPHEREUS/providers/Microsoft.Compute/disks/f" 
+        },
+        "disks_g_externalid": {
+            "value": "/subscriptions/738ed618-66b1-437e-a2af-768880a84417/resourceGroups/SPHEREUS/providers/Microsoft.Compute/disks/g" 
+        }
+    }
+}

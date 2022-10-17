@@ -1,0 +1,15 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "VMName": {
+            "value": "WIN-S-Demo-SB07"
+        },
+        "diskid": {
+            "value": "/subscriptions/738ed618-66b1-437e-a2af-768880a84417/resourceGroups/SB/providers/Microsoft.Compute/disks/SB07-Demo_disk1_5a90370a61fe479588a26f61ef834594"
+        },
+        "nicid": {
+            "value": "/subscriptions/738ed618-66b1-437e-a2af-768880a84417/resourceGroups/SB/providers/Microsoft.Network/networkInterfaces/sb07-demo769"
+        }
+    }
+}

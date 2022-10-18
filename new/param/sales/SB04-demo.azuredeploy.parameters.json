@@ -3,13 +3,13 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "VMName": {
-            "value": "WIN-S-Ex2010"
+            "value": "WIN-S-AdWinSvr01"
         },
         "diskid": {
-            "value": "/subscriptions/93077af1-0323-4ee0-8303-afb4c3d3479c/resourceGroups/Network-sales-rg/providers/Microsoft.Compute/disks/DemoEx2010_disk1_15ac597e948e48d4851ec5ae1a0e116e"
+            "value": "/subscriptions/738ed618-66b1-437e-a2af-768880a84417/resourceGroups/Network-sales-rg/providers/Microsoft.Compute/disks/DemoADWinSvr01_disk1_66021a5789b14235925da1829d37132e"
         },
         "nicid": {
-            "value": "/subscriptions/93077af1-0323-4ee0-8303-afb4c3d3479c/resourceGroups/SB-SALES-rg/providers/Microsoft.Network/networkInterfaces/DemoEx2010-nic01"
+            "value": "/subscriptions/738ed618-66b1-437e-a2af-768880a84417/resourceGroups/Network-sales-rg/providers/Microsoft.Network/networkInterfaces/DemoADWinSvr01-n01"
         }
     }
 }

@@ -13,6 +13,12 @@
         "nicid": {
             "defaultValue": "",
             "type": "String"
+        },
+        "disks_f_externalid": {
+            "type": "string",
+            "metadata": {
+                "description": "description"
+            }
         }
     },
     "variables": {},
@@ -35,7 +41,7 @@
             },
             "properties": {
                 "hardwareProfile": {
-                    "vmSize": "Standard_b2ms"
+                    "vmSize": "Standard_a2m_v2"
                 },
                 "storageProfile": {
                     "osDisk": {
@@ -47,7 +53,20 @@
                         },
                         "deleteOption": "Detach"
                     },
-                     "dataDisks": []
+                     "dataDisks":  [
+                        {
+                            "lun": 0,
+                           
+                            "createOption": "Attach",
+                            "caching": "ReadOnly",
+                            "writeAcceleratorEnabled": false,
+                            "managedDisk": {
+                                "id": "[parameters('disks_f_externalid')]"
+                            },
+                            "toBeDetached": false
+                        }
+                        
+                    ]
             
           
                 },

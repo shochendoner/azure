@@ -3,13 +3,13 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "VMName": {
-            "value": "WIN-S-Demo-SB04"
+            "value": "WIN-S-Ex2010"
         },
         "diskid": {
-            "value": "/subscriptions/93077af1-0323-4ee0-8303-afb4c3d3479c/resourceGroups/SB-sales-rg/providers/Microsoft.Compute/disks/SB04-Demo"
+            "value": "/subscriptions/93077af1-0323-4ee0-8303-afb4c3d3479c/resourceGroups/Network-sales-rg/providers/Microsoft.Compute/disks/DemoEx2010_disk1_15ac597e948e48d4851ec5ae1a0e116e"
         },
         "nicid": {
-            "value": "/subscriptions/93077af1-0323-4ee0-8303-afb4c3d3479c/resourceGroups/SB-SALES-rg/providers/Microsoft.Network/networkInterfaces/sb04-demo-nic02"
+            "value": "/subscriptions/93077af1-0323-4ee0-8303-afb4c3d3479c/resourceGroups/SB-SALES-rg/providers/Microsoft.Network/networkInterfaces/DemoEx2010-nic01"
         }
     }
 }

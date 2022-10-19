@@ -41,7 +41,7 @@
             },
             "properties": {
                 "hardwareProfile": {
-                    "vmSize": "Standard_a2m_v2"
+                    "vmSize": "Standard_b2ms"
                 },
                 "storageProfile": {
                     "osDisk": {
@@ -65,7 +65,6 @@
                             },
                             "toBeDetached": false
                         }
-                        
                     ]
             
           

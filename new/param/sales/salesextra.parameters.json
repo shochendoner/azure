@@ -3,17 +3,18 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "VMName": {
-            "value": "WIN-S-SPHEREBOARD02"
+            "value": "WIN-S-SQLSERVER02"
         },
         "diskid": {
-            "value": "/subscriptions/738ed618-66b1-437e-a2af-768880a84417/resourceGroups/Network-sales-rg/providers/Microsoft.Compute/disks/SPHEREboard02_OsDisk_1_1acb76a2338a4ff28abaf3e0482fcc59"
+            "value": "/subscriptions/738ed618-66b1-437e-a2af-768880a84417/resourceGroups/SPHEREUS/providers/Microsoft.Compute/disks/SQLSERVER02_OsDisk_1_120df030f8f0481495471b52c76b70ce"
         },
         "nicid": {
-            "value": "/subscriptions/738ed618-66b1-437e-a2af-768880a84417/resourceGroups/Network-sales-rg/providers/Microsoft.Network/networkInterfaces/SPHEREBoard02-n01"
+            "value": "/subscriptions/738ed618-66b1-437e-a2af-768880a84417/resourceGroups/SPHEREUS/providers/Microsoft.Network/networkInterfaces/sqlserver02469"
         },
         "disks_f_externalid": {
-            "value": "/subscriptions/738ed618-66b1-437e-a2af-768880a84417/resourceGroups/Network-sales-rg/providers/Microsoft.Compute/disks/Sphereboard02_Data" 
-        }
+            "value": "/subscriptions/738ed618-66b1-437e-a2af-768880a84417/resourceGroups/SPHEREUS/providers/Microsoft.Compute/disks/SQLSERVER02_DataDisk_0" 
+        },
+        
         
     
     }

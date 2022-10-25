@@ -13,6 +13,10 @@
         "nicid": {
             "defaultValue": "",
             "type": "String"
+        },
+        "disks_f_externalid": {
+            "defaultValue": "",
+            "type": "String"
         }
     },
     "variables": {},
@@ -23,29 +27,43 @@
             "name": "[parameters('VMName')]",
             "location": "eastus",
             "tags":  {
-                "Owner:": "Carly Bean",
-                "Domain:": "UAT",
+                "CreatedBy": "Naf",
+                "Requested By": "Doug Bayne",
+                "Purpose": "CTERA",
+                "Environment": "UAT",
                 "VMSchedule-Enabled": "Yes",
                 "VMSchedule-Weekdays": "06-18",
-                "VMSchedule-Weekends": "Off",
                 "VMSchedule-UTCOffset": "-4",
+                "VMSchedule-Weekends": "Off",
                 "VMSchedule-Exclusions": "Start"
             },
             "properties": {
                 "hardwareProfile": {
-                    "vmSize": "Standard_E2s_v3"
+                    "vmSize": "Standard_D2s_v3"
                 },
                 "storageProfile": {
                     "osDisk": {
-                        "osType": "Windows",
+                        "osType": "Linux",
                         "createOption": "Attach",
-                        "caching": "ReadWrite",
+                        "caching": "ReadOnly",
                         "managedDisk": {
                             "id": "[parameters('diskid')]"
                         },
                         "deleteOption": "Detach"
                     },
-                    "dataDisks": []
+                    "dataDisks": [
+                        {
+                            "lun": 0,
+                            "name": "[parameters('disks_f_externalid')]",
+                            "createOption": "Attach",
+                            "caching": "ReadOnly",
+                            "writeAcceleratorEnabled": false,
+                            "managedDisk": {
+                                "id": "[parameters('disks_f_externalid')]"
+                            },
+                            "toBeDetached": false
+                        }
+                    ]
                 },
                 "networkProfile": {
                     "networkInterfaces": [

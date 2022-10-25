@@ -54,7 +54,7 @@
                     "dataDisks": [
                         {
                             "lun": 0,
-                            "name": "[parameters('disks_f_externalid')]",
+                           
                             "createOption": "Attach",
                             "caching": "ReadOnly",
                             "writeAcceleratorEnabled": false,

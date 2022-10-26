@@ -10,11 +10,6 @@
         },
         "nicid": {
             "value": "/subscriptions/738ed618-66b1-437e-a2af-768880a84417/resourceGroups/Network-UAT-rg/providers/Microsoft.Network/networkInterfaces/SQL02-UAT-nic01"
-        },
-        "disks_f_externalid": {
-            "value": "/subscriptions/738ed618-66b1-437e-a2af-768880a84417/resourceGroups/Network-UAT-rg/providers/Microsoft.Compute/disks/SQL02-UAT_DataDisk_0"
         }
-        
-
     }
 }

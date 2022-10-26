@@ -15,8 +15,10 @@
             "type": "String"
         },
         "disks_f_externalid": {
-            "defaultValue": "",
-            "type": "String"
+            "type": "string",
+            "metadata": {
+                "description": "description"
+            }
         }
     },
     "variables": {},
@@ -26,14 +28,10 @@
             "apiVersion": "2022-03-01",
             "name": "[parameters('VMName')]",
             "location": "eastus",
-            "tags":  {
-                "CreatedBy": "Naf",
-                "Requested By": "Doug Bayne",
-                "Purpose": "CTERA",
-                "Environment": "UAT",
-                "VMSchedule-Enabled": "Yes",
-                "VMSchedule-Weekdays": "06-18",
+             "tags": {
+                "VMSchedule-Enabled": "No",
                 "VMSchedule-UTCOffset": "-4",
+                "VMSchedule-Weekdays": "06-18",
                 "VMSchedule-Weekends": "Off",
                 "VMSchedule-Exclusions": "Start"
             },
@@ -43,20 +41,20 @@
                 },
                 "storageProfile": {
                     "osDisk": {
-                        "osType": "Linux",
+                        "osType": "Windows",
                         "createOption": "Attach",
-                        "caching": "ReadOnly",
+                        "caching": "ReadWrite",
                         "managedDisk": {
                             "id": "[parameters('diskid')]"
                         },
                         "deleteOption": "Detach"
                     },
                     "dataDisks": [
+
                         {
                             "lun": 0,
-                           
                             "createOption": "Attach",
-                            "caching": "ReadOnly",
+                            "caching": "None",
                             "writeAcceleratorEnabled": false,
                             "managedDisk": {
                                 "id": "[parameters('disks_f_externalid')]"

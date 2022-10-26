@@ -3,16 +3,18 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "VMName": {
-            "value": "LNX-U-Ctera-Portal"
+            "value": "WIN-U-SQL02"
         },
         "diskid": {
-            "value": "/subscriptions/738ed618-66b1-437e-a2af-768880a84417/resourceGroups/Network-UAT-rg/providers/Microsoft.Compute/disks/Ctera-portal-UAT_disk1_05c2810a729d4242924bbcfa9232abc4"
+            "value": "/subscriptions/738ed618-66b1-437e-a2af-768880a84417/resourceGroups/Network-UAT-rg/providers/Microsoft.Compute/disks/SQL02-UAT_OsDisk_1_82b5296bb8124c61bb35c52a4f66b4ce"
         },
         "nicid": {
-            "value": "/subscriptions/738ed618-66b1-437e-a2af-768880a84417/resourceGroups/Network-UAT-rg/providers/Microsoft.Network/networkInterfaces/Ctera-portal-UAT-nic01"
+            "value": "/subscriptions/738ed618-66b1-437e-a2af-768880a84417/resourceGroups/Network-UAT-rg/providers/Microsoft.Network/networkInterfaces/SQL02-UAT-nic01"
         },
-        "disks_f_externalid" : {
-            "value": "/subscriptions/738ed618-66b1-437e-a2af-768880a84417/resourceGroups/Network-UAT-rg/providers/Microsoft.Compute/disks/Ctera-portal-UAT_disk2_56bf99a91f2a4dc78517e00f01ded8cf"
+        "disks_f_externalid": {
+            "value": "/subscriptions/738ed618-66b1-437e-a2af-768880a84417/resourceGroups/Network-UAT-rg/providers/Microsoft.Compute/disks/SQL02-UAT_DataDisk_0"
         }
+        
+
     }
 }

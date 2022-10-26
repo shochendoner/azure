@@ -23,8 +23,7 @@
             "name": "[parameters('VMName')]",
             "location": "eastus",
             "tags":  {
-                "Owner:": "Jeremy Chung",
-                "Domain:": "Demo",
+                
                 "VMSchedule-Enabled": "Yes",
                 "VMSchedule-Weekdays": "06-18",
                 "VMSchedule-Weekends": "Off",

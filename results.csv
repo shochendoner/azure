@@ -1,7 +1,0 @@
-"Name","FQDN","Port","Result"
-"dc01-uat","dc01-uat.uatdomain.zone","139","True"
-"dc01-uat","dc01-uat.uatdomain.zone","389","True"
-"sql01-uat","sql01-uat.uatdomain.zone","1433","True"
-"spheredc01","spheredc01.12sphere.com","135","True"
-"dEMOadwINsVR01","dEMOadwINsVR01.spheredemo.corp","389","True"
-"dEMOadwINsVR01","dEMOadwINsVR01.spheredemo.corp","3389","True"

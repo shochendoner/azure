@@ -13,12 +13,15 @@
         "nicid": {
             "defaultValue": "",
             "type": "String"
+<<<<<<< HEAD
         },
         "disks_f_externalid": {
             "type": "string",
             "metadata": {
                 "description": "description"
             }
+=======
+>>>>>>> 62a6c263826b2ac64d946768e6c5e756c694edbd
         }
     },
     "variables": {},
@@ -28,16 +31,24 @@
             "apiVersion": "2022-03-01",
             "name": "[parameters('VMName')]",
             "location": "eastus",
+<<<<<<< HEAD
              "tags": {
                 "VMSchedule-Enabled": "No",
                 "VMSchedule-UTCOffset": "-4",
+=======
+            "tags": {
+                "Owner:": "",
+                "Environment:": "",
+                "VMSchedule-Enabled": "Yes",
+>>>>>>> 62a6c263826b2ac64d946768e6c5e756c694edbd
                 "VMSchedule-Weekdays": "06-18",
                 "VMSchedule-Weekends": "Off",
+                "VMSchedule-UTCOffset": "-4",
                 "VMSchedule-Exclusions": "Start"
             },
             "properties": {
                 "hardwareProfile": {
-                    "vmSize": "Standard_D2s_v3"
+                    "vmSize": "Standard_E2s_v3"
                 },
                 "storageProfile": {
                     "osDisk": {
@@ -50,6 +61,7 @@
                         "deleteOption": "Detach"
                     },
                     "dataDisks": [
+<<<<<<< HEAD
 
                         {
                             "lun": 0,
@@ -61,6 +73,9 @@
                             },
                             "toBeDetached": false
                         }
+=======
+                        
+>>>>>>> 62a6c263826b2ac64d946768e6c5e756c694edbd
                     ]
                 },
                 "networkProfile": {

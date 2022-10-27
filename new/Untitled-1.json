@@ -1,0 +1,26 @@
+,
+        "external0": {
+            "value": "/subscriptions/738ed618-66b1-437e-a2af-768880a84417/resourceGroups/Network-UAT-rg/providers/Microsoft.Compute/disks/SQL01-UAT_DataDisk_0"
+        },
+        "external1": {
+            "value":"/subscriptions/738ed618-66b1-437e-a2af-768880a84417/resourceGroups/Network-UAT-rg/providers/Microsoft.Compute/disks/sql01-uat_tempdb"
+
+
+
+
+            
+        "external0": {
+            "defaultValue": "",
+            "type": "String"
+        },
+        "external1": {
+            "defaultValue": "",
+            "type": "String"
+        }
+
+
+
+
+        delete bastion
+        delete peering
+        move resources

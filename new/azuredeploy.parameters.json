@@ -3,13 +3,16 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "VMName": {
-            "value": "WIN-U-SQL02"
+            "value": "WIN-U-SAT-SB01"
         },
         "diskid": {
-            "value": "/subscriptions/738ed618-66b1-437e-a2af-768880a84417/resourceGroups/Network-UAT-rg/providers/Microsoft.Compute/disks/SQL02-UAT_OsDisk_1_82b5296bb8124c61bb35c52a4f66b4ce"
+            "value": "/subscriptions/5260b8ef-4241-4d10-a16b-18f6d613575e/resourceGroups/Target-UAT-rg/providers/Microsoft.Compute/disks/SB01-SAT-UAT_disk1_72c33e1eb4b348f4bdddf7803217e4ff"
         },
         "nicid": {
-            "value": "/subscriptions/738ed618-66b1-437e-a2af-768880a84417/resourceGroups/Network-UAT-rg/providers/Microsoft.Network/networkInterfaces/SQL02-UAT-nic01"
+            "value": "/subscriptions/5260b8ef-4241-4d10-a16b-18f6d613575e/resourceGroups/Target-UAT-rg/providers/Microsoft.Network/networkInterfaces/SB01-SAT-UAT-nic01"
+        },
+        "external0": {
+            "value": "/subscriptions/5260b8ef-4241-4d10-a16b-18f6d613575e/resourceGroups/Target-UAT-rg/providers/Microsoft.Compute/disks/sb01-sat-uat-datadisk"
+        }
         }
     }
-}

@@ -1,6 +1,6 @@
 $templateFile = ".\azuredeploy.uat.json"
 $parameterFile = ".\azuredeploy.parameters.json"
-$rgname = "Network-UAT-rg"
+$rgname = "Target-UAT-rg"
 New-AzResourceGroupDeployment `
   -Name SB06-uatday2 `
   -ResourceGroupName $rgname `

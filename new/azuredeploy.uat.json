@@ -13,6 +13,10 @@
         "nicid": {
             "defaultValue": "",
             "type": "String"
+        },
+         "external0": {
+            "defaultValue": "",
+            "type": "String"
         }
     },
     "variables": {},
@@ -23,8 +27,11 @@
             "name": "[parameters('VMName')]",
             "location": "eastus",
             "tags": {
-                "Owner:": "",
-                "Environment:": "",
+                "Owner": "Michael Dong",
+                "Domain": "UAT",
+                "CreatedBy": "Steven.Hochendoner",
+                "CreatedOn": "10-26-2022",
+                "Purpose": "Sphereboard Satellite Server",
                 "VMSchedule-Enabled": "Yes",
                 "VMSchedule-Weekdays": "06-18",
                 "VMSchedule-Weekends": "Off",
@@ -33,7 +40,7 @@
             },
             "properties": {
                 "hardwareProfile": {
-                    "vmSize": "Standard_E2s_v3"
+                    "vmSize": "Standard_D2s_v5"
                 },
                 "storageProfile": {
                     "osDisk": {
@@ -46,6 +53,20 @@
                         "deleteOption": "Detach"
                     },
                     "dataDisks": [
+                        {
+                            "lun": 0,
+                            
+                            "createOption": "Attach",
+                            "caching": "ReadWrite",
+                            "writeAcceleratorEnabled": false,
+                            "managedDisk": {
+            
+                                "id": "[parameters('external0')]"
+                            },
+                            "deleteOption": "Detach",
+                           
+                            "toBeDetached": true
+                        }
                         
                     ]
                 },

@@ -27,20 +27,18 @@
             "name": "[parameters('VMName')]",
             "location": "eastus",
             "tags": {
-                "Owner": "Michael Dong",
-                "Domain": "UAT",
-                "CreatedBy": "Steven.Hochendoner",
-                "CreatedOn": "10-26-2022",
-                "Purpose": "Sphereboard Satellite Server",
+                "Owner": "Xavier Garcia",
+                "Application": "AvePoint Migration VM",
+                "Services": "Fly Manager System and Fly Agent System",
                 "VMSchedule-Enabled": "Yes",
                 "VMSchedule-Weekdays": "06-18",
-                "VMSchedule-Weekends": "Off",
                 "VMSchedule-UTCOffset": "-4",
+                "VMSchedule-Weekends": "Off",
                 "VMSchedule-Exclusions": "Start"
             },
             "properties": {
                 "hardwareProfile": {
-                    "vmSize": "Standard_D2s_v5"
+                    "vmSize": "Standard_b2s"
                 },
                 "storageProfile": {
                     "osDisk": {
@@ -54,7 +52,7 @@
                     },
                     "dataDisks": [
                         {
-                            "lun": 0,
+                            "lun": 2,
                             
                             "createOption": "Attach",
                             "caching": "ReadWrite",

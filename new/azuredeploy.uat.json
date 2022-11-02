@@ -13,11 +13,8 @@
         "nicid": {
             "defaultValue": "",
             "type": "String"
-        },
-         "external0": {
-            "defaultValue": "",
-            "type": "String"
         }
+
     },
     "variables": {},
     "resources": [
@@ -27,18 +24,15 @@
             "name": "[parameters('VMName')]",
             "location": "eastus",
             "tags": {
-                "Owner": "Xavier Garcia",
-                "Application": "AvePoint Migration VM",
-                "Services": "Fly Manager System and Fly Agent System",
-                "VMSchedule-Enabled": "Yes",
-                "VMSchedule-Weekdays": "06-18",
+                "VMSchedule-Enabled": "No",
+                "VMSchedule-Exclusions": "Start",
                 "VMSchedule-UTCOffset": "-4",
-                "VMSchedule-Weekends": "Off",
-                "VMSchedule-Exclusions": "Start"
+                "VMSchedule-Weekdays": "06-18",
+                "VMSchedule-Weekends": "Off"
             },
             "properties": {
                 "hardwareProfile": {
-                    "vmSize": "Standard_b2s"
+                    "vmSize": "Standard_D2s_v3"
                 },
                 "storageProfile": {
                     "osDisk": {
@@ -51,20 +45,6 @@
                         "deleteOption": "Detach"
                     },
                     "dataDisks": [
-                        {
-                            "lun": 2,
-                            
-                            "createOption": "Attach",
-                            "caching": "ReadWrite",
-                            "writeAcceleratorEnabled": false,
-                            "managedDisk": {
-            
-                                "id": "[parameters('external0')]"
-                            },
-                            "deleteOption": "Detach",
-                           
-                            "toBeDetached": true
-                        }
                         
                     ]
                 },

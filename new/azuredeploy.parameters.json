@@ -3,16 +3,14 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "VMName": {
-            "value": "WIN-D-VM01"
+            "value": "WIN-C-SysadVM01"
         },
         "diskid": {
-            "value": "/subscriptions/738ed618-66b1-437e-a2af-768880a84417/resourceGroups/Network-DEV-rg/providers/Microsoft.Compute/disks/VM01_OSdisk"
+            "value": "/subscriptions/738ed618-66b1-437e-a2af-768880a84417/resourceGroups/Network-Corp-rg/providers/Microsoft.Compute/disks/SysAdVM01_OsDisk_1_c24f0aff290145e2861a79415161ec0a"
         },
         "nicid": {
-            "value": "/subscriptions/738ed618-66b1-437e-a2af-768880a84417/resourceGroups/Network-DEV-rg/providers/Microsoft.Network/networkInterfaces/vm-nic01"
-        },
-        "external0": {
-            "value": "/subscriptions/738ed618-66b1-437e-a2af-768880a84417/resourceGroups/Network-DEV-rg/providers/Microsoft.Compute/disks/datadisk"
+            "value": "/subscriptions/738ed618-66b1-437e-a2af-768880a84417/resourceGroups/Network-Corp-rg/providers/Microsoft.Network/networkInterfaces/SysadVM01-nic01"
         }
+        
     }
 }

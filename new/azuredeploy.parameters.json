@@ -3,13 +3,13 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "VMName": {
-            "value": "WIN-C-DeveloperVM20"
+            "value": "WIN-C-SphereBoardProd"
         },
         "diskid": {
-            "value": "/subscriptions/738ed618-66b1-437e-a2af-768880a84417/resourceGroups/Network-Corp-rg/providers/Microsoft.Compute/disks/DeveloperVM20_OsDisk_1_7f1d6c0083ee4ec9b88b31578309b2f1"
+            "value": "/subscriptions/738ed618-66b1-437e-a2af-768880a84417/resourceGroups/Network-Corp-rg/providers/Microsoft.Compute/disks/SphereBoardProd_OsDisk_1_4060c06b312f44d993d72a1ae3160bdc"
         },
         "nicid": {
-            "value": "/subscriptions/738ed618-66b1-437e-a2af-768880a84417/resourceGroups/Network-Corp-rg/providers/Microsoft.Network/networkInterfaces/dev20-nic01"
+            "value": "/subscriptions/738ed618-66b1-437e-a2af-768880a84417/resourceGroups/Network-Corp-rg/providers/Microsoft.Network/networkInterfaces/Sphereboardprod-nic01"
         }
         }
         

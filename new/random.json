@@ -1,0 +1,7 @@
+,
+        "external0": {
+            "value": "/subscriptions/738ed618-66b1-437e-a2af-768880a84417/resourceGroups/Network-Corp-rg/providers/Microsoft.Compute/disks/DeveloperVM20_OsDisk_1_7f1d6c0083ee4ec9b88b31578309b2f1"
+        },
+        "external1": {
+            "value": "/subscriptions/738ed618-66b1-437e-a2af-768880a84417/resourceGroups/Network-Corp-rg/providers/Microsoft.Compute/disks/DeveloperVM20_OsDisk_1_7f1d6c0083ee4ec9b88b31578309b2f1"
+        }

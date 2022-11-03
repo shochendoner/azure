@@ -24,7 +24,7 @@
             "name": "[parameters('VMName')]",
             "location": "eastus",
             "tags": {
-                "Purpose": "Developer VM",
+                "Purpose": "SphereBoardProd Web",
                 "Domain": "12sphere",
                 "CreatedBy": "Steven.Hochendoner",
                 "CreatedOn": "11-3-2022",
@@ -36,7 +36,7 @@
             },
             "properties": {
                 "hardwareProfile": {
-                    "vmSize": "Standard_B4ms"
+                    "vmSize": "Standard_E2s_v3"
                 },
                 "storageProfile": {
                     "osDisk": {

@@ -13,8 +13,15 @@
         "nicid": {
             "defaultValue": "",
             "type": "String"
+        },
+        "external0": {
+            "defaultValue": "",
+            "type": "String"
+        },
+        "external1": {
+            "defaultValue": "",
+            "type": "String"
         }
-
     },
     "variables": {},
     "resources": [
@@ -45,7 +52,31 @@
                         "deleteOption": "Detach"
                     },
                     "dataDisks": [
-                        
+                       {
+
+                        "lun": 0,
+                            
+                            "createOption": "Attach",
+                            "caching": "ReadWrite",
+                            "writeAcceleratorEnabled": false,
+                            "managedDisk": {
+                                "id": "[parameters('external0')]"
+                            },
+                            "deleteOption": "Detach",
+                            "toBeDetached": true
+                        },
+                        {
+                            "lun": 1,
+                            
+                            "createOption": "Attach",
+                            "caching": "ReadWrite",
+                            "writeAcceleratorEnabled": false,
+                            "managedDisk": {
+                                "id": "[parameters('external1')]"
+                            },
+                            "deleteOption": "Detach",
+                            "toBeDetached": true
+                        }
                     ]
                 },
                 "networkProfile": {

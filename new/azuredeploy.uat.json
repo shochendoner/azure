@@ -13,15 +13,8 @@
         "nicid": {
             "defaultValue": "",
             "type": "String"
-        },
-        "external0": {
-            "defaultValue": "",
-            "type": "String"
-        },
-        "external1": {
-            "defaultValue": "",
-            "type": "String"
         }
+        
     },
     "variables": {},
     "resources": [
@@ -31,7 +24,11 @@
             "name": "[parameters('VMName')]",
             "location": "eastus",
             "tags": {
-                "VMSchedule-Enabled": "No",
+                "Purpose": "Developer VM",
+                "Domain": "12sphere",
+                "CreatedBy": "Steven.Hochendoner",
+                "CreatedOn": "11-3-2022",
+                "VMSchedule-Enabled": "Yes",
                 "VMSchedule-Exclusions": "Start",
                 "VMSchedule-UTCOffset": "-4",
                 "VMSchedule-Weekdays": "06-18",
@@ -39,7 +36,7 @@
             },
             "properties": {
                 "hardwareProfile": {
-                    "vmSize": "Standard_D2s_v3"
+                    "vmSize": "Standard_B4ms"
                 },
                 "storageProfile": {
                     "osDisk": {
@@ -52,31 +49,8 @@
                         "deleteOption": "Detach"
                     },
                     "dataDisks": [
-                       {
-
-                        "lun": 0,
-                            
-                            "createOption": "Attach",
-                            "caching": "ReadWrite",
-                            "writeAcceleratorEnabled": false,
-                            "managedDisk": {
-                                "id": "[parameters('external0')]"
-                            },
-                            "deleteOption": "Detach",
-                            "toBeDetached": true
-                        },
-                        {
-                            "lun": 1,
-                            
-                            "createOption": "Attach",
-                            "caching": "ReadWrite",
-                            "writeAcceleratorEnabled": false,
-                            "managedDisk": {
-                                "id": "[parameters('external1')]"
-                            },
-                            "deleteOption": "Detach",
-                            "toBeDetached": true
-                        }
+                       
+                       
                     ]
                 },
                 "networkProfile": {

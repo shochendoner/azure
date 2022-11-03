@@ -3,21 +3,16 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "VMName": {
-            "value": "WIN-C-SPHEREExch2010"
+            "value": "WIN-C-DeveloperVM20"
         },
         "diskid": {
-            "value": "/subscriptions/738ed618-66b1-437e-a2af-768880a84417/resourceGroups/Network-Corp-rg/providers/Microsoft.Compute/disks/SPHEREExch2010_OsDisk_1_9cfdee422a7a4720a5fc96e66be913dd"
+            "value": "/subscriptions/738ed618-66b1-437e-a2af-768880a84417/resourceGroups/Network-Corp-rg/providers/Microsoft.Compute/disks/DeveloperVM20_OsDisk_1_7f1d6c0083ee4ec9b88b31578309b2f1"
         },
         "nicid": {
-            "value": "/subscriptions/738ed618-66b1-437e-a2af-768880a84417/resourceGroups/Network-Corp-rg/providers/Microsoft.Network/networkInterfaces/SPHEREExch2010-nic01"
-        },
-        "external0":{
-            "value": "/subscriptions/738ed618-66b1-437e-a2af-768880a84417/resourceGroups/Network-Corp-rg/providers/Microsoft.Compute/disks/SPHEREExch2010_DataDisk_0"
-        },
-        "external1":{
-            "value": "/subscriptions/738ed618-66b1-437e-a2af-768880a84417/resourceGroups/Network-Corp-rg/providers/Microsoft.Compute/disks/SPHEREExch2010_DataDisk_1"
+            "value": "/subscriptions/738ed618-66b1-437e-a2af-768880a84417/resourceGroups/Network-Corp-rg/providers/Microsoft.Network/networkInterfaces/dev20-nic01"
+        }
         }
         
         
-    }
+    
 }

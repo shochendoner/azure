@@ -28,19 +28,16 @@
                 "Function": "Developer",
                 "Impact": "Medium",
                 "CreatedBy": "Steven.Hochendoner",
-                "CreatedOn": "11-08-2022",
-                
-                "Owner": "Charles Lane",
-                "Role": "Workstation",
+                "CreatedOn": "11-09-2022",
+                "Owner": "Development Services",
                 "VMSchedule-Enabled": "Yes",
-                "VMSchedule-Weekdays": "06-18",
-                "VMSchedule-UTCOffset": "-5",
-                "VMSchedule-Weekends": "Off",
-                "VMSchedule-Exclusions": "Start"
+                "VMSchedule-Weekdays": "08-22",
+                "VMSchedule-UTCOffset": "+5",
+                "VMSchedule-Weekends": "Off"
             },
             "properties": {
                 "hardwareProfile": {
-                    "vmSize": "Standard_B4ms"
+                    "vmSize": "Standard_B2ms"
                 },
                 "storageProfile": {
                     "osDisk": {

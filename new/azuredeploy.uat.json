@@ -24,20 +24,23 @@
             "name": "[parameters('VMName')]",
             "location": "eastus",
             "tags": {
-                "Environment": "SphereUS",
-                "Function": "Developer",
-                "Impact": "Medium",
+               
+                
+                "CreatedOn": "11-28-2022",
                 "CreatedBy": "Steven.Hochendoner",
-                "CreatedOn": "11-09-2022",
-                "Owner": "Development Services",
+                "Owner": "Charles.Lane",
+                "Purpose": "QA",
+                "Domain": "SPHEREDEMO",
+                
                 "VMSchedule-Enabled": "Yes",
-                "VMSchedule-Weekdays": "08-22",
-                "VMSchedule-UTCOffset": "+5",
-                "VMSchedule-Weekends": "Off"
+                "VMSchedule-Weekdays": "06-18",
+                "VMSchedule-UTCOffset": "-5",
+                "VMSchedule-Weekends": "Off",
+                "VMSchedule-Exclusions": "Start"
             },
             "properties": {
                 "hardwareProfile": {
-                    "vmSize": "Standard_B2ms"
+                    "vmSize": "Standard_B4ms"
                 },
                 "storageProfile": {
                     "osDisk": {
@@ -50,10 +53,7 @@
                         "deleteOption": "Detach"
                     },
                     "dataDisks": [
-                       
                         
-                            
-                       
                     ]
                 },
                 "networkProfile": {

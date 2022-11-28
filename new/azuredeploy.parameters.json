@@ -3,14 +3,15 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "VMName": {
-            "value": "WIN-C-DeveloperVM34"
+            "value": "WIN-Q-MANUAL"
         },
         "diskid": {
-            "value": "/subscriptions/738ed618-66b1-437e-a2af-768880a84417/resourceGroups/Network-Corp-rg/providers/Microsoft.Compute/disks/DeveloperVM34_OsDisk_1_38a923f0747c4a6da7e220ed8e0d0200"
+            "value": "/subscriptions/738ed618-66b1-437e-a2af-768880a84417/resourceGroups/Network-QA-rg/providers/Microsoft.Compute/disks/QA2MANUAL_OsDisk_1_854290c38a2646e095929e2d4ec609f6"
         },
         "nicid": {
-            "value": "/subscriptions/738ed618-66b1-437e-a2af-768880a84417/resourceGroups/Network-Corp-rg/providers/Microsoft.Network/networkInterfaces/dev34-nic01"
+            "value": "/subscriptions/738ed618-66b1-437e-a2af-768880a84417/resourceGroups/Network-QA-rg/providers/Microsoft.Network/networkInterfaces/QA2MANUAL-nic01"
         }
+
         }
         }
         

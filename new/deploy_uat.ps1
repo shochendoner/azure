@@ -1,8 +1,8 @@
 $templateFile = ".\azuredeploy.uat.json"
 $parameterFile = ".\azuredeploy.parameters.json"
-$rgname = "Network-Corp-rg"
+$rgname = "Network-QA-rg"
 New-AzResourceGroupDeployment `
-  -Name Corpvnet `
+  -Name sphereboardQA `
   -ResourceGroupName $rgname `
   -TemplateFile $templateFile `
   -TemplateParameterFile $parameterFile

@@ -1,7 +1,58 @@
-,
+
         "external0": {
             "value": "/subscriptions/738ed618-66b1-437e-a2af-768880a84417/resourceGroups/Network-Corp-rg/providers/Microsoft.Compute/disks/DeveloperVM20_OsDisk_1_7f1d6c0083ee4ec9b88b31578309b2f1"
         },
         "external1": {
             "value": "/subscriptions/738ed618-66b1-437e-a2af-768880a84417/resourceGroups/Network-Corp-rg/providers/Microsoft.Compute/disks/DeveloperVM20_OsDisk_1_7f1d6c0083ee4ec9b88b31578309b2f1"
+        }
+
+
+        "Owner:": "",
+        "Environment:": "",
+        "VMSchedule-Enabled": "Yes",
+        "VMSchedule-Weekdays": "06-18",
+        "VMSchedule-Weekends": "Off",
+        "VMSchedule-UTCOffset": "-5",
+        "VMSchedule-Exclusions": "Start",
+        "Owner": "Carly Bean",
+        "Purpose": "UAT SB",
+        "CreatedBy": "Steven.Hochendoner",
+        "CreatedOn": "11-10-2022"
+    },
+    "properties": {
+        "hardwareProfile": {
+            "vmSize": "Standard_E2s_v3"
+
+
+
+
+            "parameters": {
+                "VMName": {
+                    "value": "WIN-C-BUILD-Server"
+                },
+                "diskid": {
+                    "value": "/subscriptions/738ed618-66b1-437e-a2af-768880a84417/resourceGroups/Network-Corp-rg/providers/Microsoft.Compute/disks/BUILD-Server_OsDisk_1_9a33af2b38ca488cb2a81355e1a3da79"
+                },
+                "nicid": {
+                    "value": "/subscriptions/738ed618-66b1-437e-a2af-768880a84417/resourceGroups/Network-Corp-rg/providers/Microsoft.Network/networkInterfaces/BUILD-Server-nic01"
+                },
+                "external0": {
+                    "value": "/subscriptions/738ed618-66b1-437e-a2af-768880a84417/resourceGroups/Network-Corp-rg/providers/Microsoft.Compute/disks/BUILD-Server_DataDisk_0"
+                },
+                "external1": {
+                    "value": "/subscriptions/738ed618-66b1-437e-a2af-768880a84417/resourceGroups/Network-Corp-rg/providers/Microsoft.Compute/disks/Build-Server_DataDisk_1"
+                }
+        
+                }
+                }
+        
+                
+                
+        "external0": {
+            "defaultValue": "",
+            "type": "String"
+        },
+        "external1": {
+            "defaultValue": "",
+            "type": "String"
         }

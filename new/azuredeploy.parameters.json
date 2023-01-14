@@ -3,16 +3,21 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "VMName": {
-            "value": "WIN-Q-SPHEREboard01"
+            "value": "WIN-C-SphereBoardProdSQL"
         },
         "diskid": {
-            "value": "/subscriptions/738ed618-66b1-437e-a2af-768880a84417/resourceGroups/Network-QA-rg/providers/Microsoft.Compute/disks/SPHEREboardQA01_OsDisk_1_cad77d39e85f4c22a9cb7abb25fc4de9"
+            "value": "/subscriptions/738ed618-66b1-437e-a2af-768880a84417/resourceGroups/Network-Corp-rg/providers/Microsoft.Compute/disks/SphereBoardProdSQL_OsDisk_1_2a882e00abef401e965a6d732fbac2c0"
         },
         "nicid": {
-            "value": "/subscriptions/738ed618-66b1-437e-a2af-768880a84417/resourceGroups/Network-QA-rg/providers/Microsoft.Network/networkInterfaces/SPHEREboardQA01-nic01"
+            "value": "/subscriptions/738ed618-66b1-437e-a2af-768880a84417/resourceGroups/Network-Corp-rg/providers/Microsoft.Network/networkInterfaces/sphereboardprodsql-nic01"
+        },
+        "external0": {
+            "value": "/subscriptions/738ed618-66b1-437e-a2af-768880a84417/resourceGroups/Network-Corp-rg/providers/Microsoft.Compute/disks/sphereboardprodsql-datadisk01"
+        },
+        "external1": {
+            "value": "/subscriptions/738ed618-66b1-437e-a2af-768880a84417/resourceGroups/Network-Corp-rg/providers/Microsoft.Compute/disks/sphereboardprodsql-tempdb01"
         }
         }
         
         
     
-}

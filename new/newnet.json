@@ -1,0 +1,122 @@
+{
+    "id": "/subscriptions/5260b8ef-4241-4d10-a16b-18f6d613575e/resourcegroups/sphereboard-networks/providers/microsoft.network/virtualnetworks/sphereboard-vnet-uat-eastus",
+    "name": "SphereBoard-VNET-UAT-eastus",
+    "type": "microsoft.network/virtualnetworks",
+    "location": "eastus",
+    "tags": {},
+    "kind": "",
+    "sku": null,
+    "plan": null,
+    "managedBy": "",
+    "properties": {
+        "addressSpace": {
+            "addressPrefixes": [
+                "172.30.0.0/18"
+            ]
+        },
+        "dhcpOptions": {
+            "dnsServers": [
+                "172.30.6.4"
+            ]
+        },
+        "enableDdosProtection": false,
+        "provisioningState": "Succeeded",
+        "resourceGuid": "183568eb-90ee-4b77-92fb-bc477c24a405",
+        "subnets": [
+            {
+                "etag": "W/\"301d6be5-defa-4d25-a87e-329dc1e01f68\"",
+                "id": "/subscriptions/5260b8ef-4241-4d10-a16b-18f6d613575e/resourceGroups/SphereBoard-Networks/providers/Microsoft.Network/virtualNetworks/SphereBoard-VNET-UAT-eastus/subnets/default",
+                "name": "default",
+                "properties": {
+                    "addressPrefix": "172.30.0.0/24",
+                    "delegations": [],
+                    "privateEndpointNetworkPolicies": "Disabled",
+                    "privateLinkServiceNetworkPolicies": "Enabled",
+                    "provisioningState": "Succeeded"
+                },
+                "type": "Microsoft.Network/virtualNetworks/subnets"
+            },
+            {
+                "etag": "W/\"301d6be5-defa-4d25-a87e-329dc1e01f68\"",
+                "id": "/subscriptions/5260b8ef-4241-4d10-a16b-18f6d613575e/resourceGroups/SphereBoard-Networks/providers/Microsoft.Network/virtualNetworks/SphereBoard-VNET-UAT-eastus/subnets/SphereBoard-UAT",
+                "name": "SphereBoard-UAT",
+                "properties": {
+                    "addressPrefix": "172.30.1.0/24",
+                    "delegations": [],
+                    "privateEndpointNetworkPolicies": "Disabled",
+                    "privateLinkServiceNetworkPolicies": "Enabled",
+                    "provisioningState": "Succeeded"
+                },
+                "type": "Microsoft.Network/virtualNetworks/subnets"
+            },
+            {
+                "etag": "W/\"301d6be5-defa-4d25-a87e-329dc1e01f68\"",
+                "id": "/subscriptions/5260b8ef-4241-4d10-a16b-18f6d613575e/resourceGroups/SphereBoard-Networks/providers/Microsoft.Network/virtualNetworks/SphereBoard-VNET-UAT-eastus/subnets/SphereBoard-toc",
+                "name": "SphereBoard-toc",
+                "properties": {
+                    "addressPrefix": "172.30.6.0/24",
+                    "delegations": [],
+                    "ipConfigurations": [
+                        {
+                            "id": "/subscriptions/5260b8ef-4241-4d10-a16b-18f6d613575e/resourceGroups/SphereBoard-toc-Infrastructure/providers/Microsoft.Network/networkInterfaces/DC-toc-01VMNic/ipConfigurations/ipconfigDC-toc-01"
+                        },
+                        {
+                            "id": "/subscriptions/5260b8ef-4241-4d10-a16b-18f6d613575e/resourceGroups/SphereBoard-toc-Infrastructure/providers/Microsoft.Network/networkInterfaces/SB-tocVMNic1/ipConfigurations/ipconfigSB-toc1"
+                        },
+                        {
+                            "id": "/subscriptions/5260b8ef-4241-4d10-a16b-18f6d613575e/resourceGroups/SphereBoard-toc-Infrastructure/providers/Microsoft.Network/networkInterfaces/SB-tocVMNic0/ipConfigurations/ipconfigSB-toc0"
+                        }
+                    ],
+                    "networkSecurityGroup": {
+                        "id": "/subscriptions/5260b8ef-4241-4d10-a16b-18f6d613575e/resourceGroups/SphereBoard-Networks/providers/Microsoft.Network/networkSecurityGroups/SphereBoard-toc-NSG"
+                    },
+                    "privateEndpointNetworkPolicies": "Disabled",
+                    "privateLinkServiceNetworkPolicies": "Enabled",
+                    "provisioningState": "Succeeded"
+                },
+                "type": "Microsoft.Network/virtualNetworks/subnets"
+            }
+        ],
+        "virtualNetworkPeerings": [
+            {
+                "etag": "W/\"301d6be5-defa-4d25-a87e-329dc1e01f68\"",
+                "id": "/subscriptions/5260b8ef-4241-4d10-a16b-18f6d613575e/resourceGroups/SphereBoard-Networks/providers/Microsoft.Network/virtualNetworks/SphereBoard-VNET-UAT-eastus/virtualNetworkPeerings/SphereBoard-VNET-uat-eastus_TO_SphereUS-vnet",
+                "name": "SphereBoard-VNET-uat-eastus_TO_SphereUS-vnet",
+                "properties": {
+                    "allowForwardedTraffic": true,
+                    "allowGatewayTransit": false,
+                    "allowVirtualNetworkAccess": true,
+                    "doNotVerifyRemoteGateways": false,
+                    "peerCompleteVnets": true,
+                    "peeringState": "Connected",
+                    "peeringSyncLevel": "FullyInSync",
+                    "provisioningState": "Succeeded",
+                    "remoteAddressSpace": {
+                        "addressPrefixes": [
+                            "10.1.0.0/23",
+                            "10.10.0.0/16"
+                        ]
+                    },
+                    "remoteGateways": [
+                        {
+                            "id": "/subscriptions/738ed618-66b1-437e-a2af-768880a84417/resourceGroups/SphereUS/providers/Microsoft.Network/virtualNetworkGateways/USvnetGW"
+                        }
+                    ],
+                    "remoteVirtualNetwork": {
+                        "id": "/subscriptions/738ed618-66b1-437e-a2af-768880a84417/resourceGroups/SPHEREUS/providers/Microsoft.Network/virtualNetworks/SphereUS-vnet"
+                    },
+                    "remoteVirtualNetworkAddressSpace": {
+                        "addressPrefixes": [
+                            "10.1.0.0/23",
+                            "10.10.0.0/16"
+                        ]
+                    },
+                    "resourceGuid": "39e272b5-e749-01a2-3e8b-53f761d8571f",
+                    "routeServiceVips": {},
+                    "useRemoteGateways": true
+                },
+                "type": "Microsoft.Network/virtualNetworks/virtualNetworkPeerings"
+            }
+        ]
+    }
+}

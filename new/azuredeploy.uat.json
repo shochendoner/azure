@@ -13,6 +13,14 @@
         "nicid": {
             "defaultValue": "",
             "type": "String"
+        },
+        "external0": {
+            "defaultValue": "",
+            "type": "String"
+        },
+        "external1": {
+            "defaultValue": "",
+            "type": "String"
         }
         
     },
@@ -24,20 +32,19 @@
             "name": "[parameters('VMName')]",
             "location": "eastus",
             "tags": {
-                "Purpose": "SPHEREBoard QA",
-                "Domain": "SPHEREDEMO",
-              "Owner": "Charles.Lane",
+                "Purpose": "SphereBoardProd SQL",
+                "Domain": "12sphere",
                 "CreatedBy": "Steven.Hochendoner",
-                "CreatedOn": "11-21-2022",
-                "VMSchedule-Enabled": "No",
+                "CreatedOn": "11-3-2022",
+                "VMSchedule-Enabled": "Yes",
+                "VMSchedule-Exclusions": "Start",
+                "VMSchedule-UTCOffset": "-4",
                 "VMSchedule-Weekdays": "06-18",
-                "VMSchedule-UTCOffset": "+5",
-                "VMSchedule-Weekends": "Off",
-                "VMSchedule-Exclusions": "Start"
+                "VMSchedule-Weekends": "Off"
             },
             "properties": {
                 "hardwareProfile": {
-                    "vmSize": "Standard_b2ms"
+                    "vmSize": "Standard_E2s_v3"
                 },
                 "storageProfile": {
                     "osDisk": {
@@ -50,7 +57,33 @@
                         "deleteOption": "Detach"
                     },
                     "dataDisks": [
-                       
+                       {
+                            "lun": 0,
+                           
+                            "createOption": "Attach",
+                            "caching": "ReadOnly",
+                            "writeAcceleratorEnabled": false,
+                            "managedDisk": {
+                                "storageAccountType": "StandardSSD_LRS",
+                                "id": "[parameters('external0')]"
+                            },
+                            "deleteOption": "Detach",
+                            
+                            "toBeDetached": false
+                        },
+                        {
+                            "lun": 1,
+                            
+                            "createOption": "Attach",
+                            "caching": "ReadOnly",
+                            "writeAcceleratorEnabled": false,
+                            "managedDisk": {
+                                "storageAccountType": "StandardSSD_LRS",
+                                "id": "[parameters('external1')]"
+                            },
+                            "deleteOption": "Detach",
+                            "toBeDetached": false
+                        }
                        
                     ]
                 },
